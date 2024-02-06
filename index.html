@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=League+Spartan">
+    <link rel="icon" type="image/ico" href="img/icone/LOGO-ITALO-FREITAS.ico">
+    <title>portifólio</title>
+</head>
+<body>
+    <header>
+        
+        <input type="image" src="img/icone/menu-hamburguer.png" alt="opcões" id="opcoes" onclick="toggleMenu()">
+        
+
+        <nav id="lista">
+            <ul>
+                <li><a href="#inicio">Página Inicial</a></li>
+                <li><a href="#portifolio">Portifólio</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <script src="script.js"></script>
+    </header>
+    <main>
+
+        <div class="banner" id="inicio">
+            <div class="titulo">
+                <h1>O que <br>você <br>busca?</h1>
+            </div>
+            <div class="container-textos">
+                <input type="image" src="img/icone/angulo-esquerdo.png" alt="frase anterior" id="esquerda" onclick="fraseAnterior()">
+                <div class="textos">
+                    <p id="frase">Um profissional curioso que sempre busca aprender cada vez mais.</p>
+                </div>
+                <input type="image" src="img/icone/angulo-direito.png" alt="próxima frase" id="direita" onclick="fraseSeguinte()">
+            </div>
+            <script src="script-1.js"></script>
+        </div>
+
+        <div id="portifolio">
+            <h2>Meus projetos</h2>
+            <div class="container-portifolio">
+                <a href="https://italo714.github.io/cafeteria-manhattan/" class="card">
+                    <figure>
+                        <img src="img/Cafeteria.PNG" alt="Café Manhattan">
+                        <figcaption>Cafeteria Manhattan</figcaption>
+                    </figure>
+                </a>
+
+                <a href="https://italo714.github.io/AlfaTech/" class="card">
+                    <figure>
+                        <img src="img/alfa-tech.PNG" alt="Alfa Tech">
+                        <figcaption>Alfa Tech</figcaption>
+                    </figure>
+                </a>
+
+                <a href="https://italo714.github.io/Pousada-Secreta/" class="card">
+                    <figure>
+                        <img src="img/Pousada-Secreta.PNG" alt="Pousada Secreta">
+                        <figcaption>Pousada Secreta</figcaption>
+                    </figure>
+                </a>
+
+                <a href="https://italo714.github.io/imobiliaria-italo/" class="card">
+                    <figure>
+                        <img src="img/Imobiliaria-santos.PNG" alt="">
+                        <figcaption>Imobiliária Santos</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <div class="curriculo" id="sobre">
+            <h3>Meu currículo</h3>
+            <a href="doc/curriculo_Italo_Freitas.pdf">ver</a>
+        </div>
+        <div class="sobre">
+            <figure>
+                <img src="img/foto_minha.png" alt="Ítalo Shekinah Soares e Freitas">
+                <figcaption>Ítalo Shekinah Soares e Freitas.</figcaption>
+            </figure>
+            <div class="card-sobre">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Olá eu sou Ítalo Soares, atualmente tenho 20 anos e sou técnico formado em Tecnologia da Informação (TI) pela instituição SENAI Rinaldo Campos Soares em Ipatinga MG e 
+                    estou cursando um bacharelado em Engenharia de Software pela universidade Unicesumar.
+                    Procuro me manter motivado e focado em meus projetos e estudos. Busco sempre manter minha mente ocupada seja com novos cursos ou projetos pessoais. <br>
+                    
+                    Sou uma pessoa criativa, tendo ideias surpreendentes e graças a essa criatividade tendo a ter facilidade em solucionar problemas.<br>
+                    Tenho facilidade em trabalhar em equipe e sempre estou disposto a ajudar.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+    <footer id="contato">
+        <div class="tudo">
+            <figure>
+                <div>
+                    <img src="img/icone/whatsapp.png" alt="Telefone">
+                    <figcaption>(31) 98865-6082</figcaption>
+                </div>
+            </figure>
+            <figure>
+                <div>
+                    <img src="img/icone/no.png" alt="E-mail">
+                    <figcaption>italofreitas714@gmail.com</figcaption>
+                </div>
+            </figure>
+        
+            <figure>
+                <div>
+                    <img src="img/icone/linkedin.png" alt="Telefone">
+                    <figcaption>Ítalo Soares</figcaption>
+                </div>
+            </figure>
+            <figure>
+                <div>
+                    <img src="img/icone/github.png" alt="Telefone">
+                    <figcaption>Ítalo Soares</figcaption>
+                </div>
+            </figure>
+        </div>
+
+        <div class="criador">
+            <p>Desenvolvido por <span>Ítalo Freitas</span>.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,816 @@
+/*--- Geral ---*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan';
+}
+    
+    
+:root {
+    --branco: #fff;
+    --preto: #000;
+    --cor-primal: #bb05d1;
+    --tom-primal-c: #e41bfa;
+    --tom-primal-e: #8e099c;
+    --cor-segunda: #fa7e18;
+    --tom-segunda-c: #f8a35d;
+    --tom-segunda-e: #c56719;
+    --cor-terceira: #03a269;
+    --tom-terceira-c: #3ace98;
+    --tom-terceira-e: #065f3f;
+
+}
+
+body {
+    max-width: 100%;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/*--- Cabeçalho ---*/
+@media only screen and (min-width: 1024px) {
+    header {
+        height: 50px;
+        width: 100vw;
+        background-color: var(--cor-primal);
+        position: fixed;
+        top: 0;
+        align-items: center;    
+    }
+
+    #opcoes {
+        height: 40px;
+        width: auto;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #lista {
+        z-index: 3;
+        position: fixed;
+        top: 45px;
+        left: 0;
+        width: 200px;
+        background-color: var(--cor-primal);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #lista ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    #lista li {
+        margin: 15px 0;
+        border-bottom: solid var(--tom-primal-c) 1px;
+    }
+
+    #lista a {
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 20px;
+    }
+
+    /*--- Banner ---*/
+
+    .banner {
+        background: url(img/banner.png) no-repeat center fixed;
+        background-size: 120%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .titulo {
+        width: 30vw;
+    }
+
+    .titulo h1 {
+        color: var(--cor-segunda);
+        font-size: 15vh;
+        font-weight: bolder;
+    }
+
+    .container-textos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 30vw;
+    }
+
+    .container-textos input {
+        background-color: var(--cor-segunda);
+        border-radius: 50%;
+        padding: 10px;
+        width: 2vw;
+        height: auto;
+    }
+
+    .textos {
+        width: 30vw;
+        display: flex;
+        flex-direction: row;
+        margin: 0 30px;    
+    }
+
+    .textos p {
+        color: var(--cor-segunda);
+        font-size: xx-large;
+        text-align: center;
+        list-style: none;
+    }
+    /*DELETAR*/
+    #seg {
+        display: none;
+    }
+
+    #ter {
+        display: none;
+    }
+
+    /*--- Meus projetos ---*/
+
+    #portifolio {
+        min-height: 250px;
+        width: 100%;
+    }
+
+    #portifolio h2 {
+        color: var(--cor-segunda);
+        font-size: 7vh;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .container-portifolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container-portifolio a {
+        max-width: 250px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: var(--tom-primal-e) 5px 5px 20px 0px;
+        text-decoration: none;
+        margin: 15px;
+    }
+
+    .container-portifolio img {
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 20px;
+    }
+
+    .container-portifolio figcaption {
+        font-size: x-large;
+        text-align: center;
+        color: var(--tom-primal-e);
+        font-weight: bold;
+        margin: 7px;
+    }
+
+    /*--- Curriculo ---*/
+
+    .curriculo {
+        width: 100%;
+        min-height: 20px;
+        text-align: center;
+        background-color: var(--cor-primal);
+        box-shadow: var(--tom-primal-e)0px 5px 10px 1px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .curriculo h3 {
+        font-size: 30px;
+        color: var(--branco);
+    }
+
+    .curriculo a {
+        border: var(--cor-primal) solid 5px;
+        height: Auto;
+        min-width: 50px;
+        padding: 5px;
+        text-decoration: none;
+        color: var(--cor-primal);
+        font-size: larger;
+        border-radius: 10px;
+        background-color: var(--branco);
+    }
+
+    /*--- Sobre ---*/
+
+    .sobre {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .sobre figure {
+        width: 30vw;
+    }
+
+    .card-sobre {
+        width: 25vw;
+        text-align: justify;
+    }
+
+    .card-sobre h2 {
+        margin: 7vh 0 3vh 0;
+        text-align: center;
+    }
+
+    .card-sobre p {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 5vh;
+    }
+
+    /*--- Rodapé ---*/
+
+    .tudo {
+        background-color: var(--cor-primal);
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        
+    }
+
+    .tudo figure {
+        display: flex;
+        flex-direction: row;
+        margin: 10px auto;
+        color: var(--branco);
+        width: 300px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tudo div {
+        margin: auto;
+    }
+
+
+    .tudo img {
+        width: 50px;
+        height: auto;   
+    }
+
+    .criador {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: var(--tom-primal-e);
+    }
+
+    .criador p {
+        margin: auto;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--branco);
+    }
+
+    .criador span {
+        color: var(--cor-segunda);
+    }
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 481px) {
+
+    header {
+        height: 50px;
+        width: 100vw;
+        background-color: var(--cor-primal);
+        position: fixed;
+        top: 0;
+        align-items: center;    
+    }
+
+    #opcoes {
+        height: 40px;
+        width: auto;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #lista {
+        z-index: 3;
+        position: fixed;
+        top: 45px;
+        left: 0;
+        width: 200px;
+        background-color: var(--cor-primal);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #lista ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    #lista li {
+        margin: 15px 0;
+        border-bottom: solid var(--tom-primal-c) 1px;
+    }
+
+    #lista a {
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 20px;
+    }
+
+    /*--- Banner ---*/
+
+    .banner {
+        background: url(img/banner.png) no-repeat center fixed;
+        background-size: 310%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;    
+    }
+
+    .titulo {
+        margin: auto;
+        padding: 0 90px;
+        padding-top: 50px;
+    }
+
+    .titulo h1 {
+        color: var(--cor-segunda);
+        font-size: 70px;
+        font-weight: bolder;
+    }
+
+    .container-textos {
+        display: flex;
+        align-items: center;
+        width: 400px;
+        padding-top: 50px;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    .container-textos input {
+        background-color: var(--cor-segunda);
+        border-radius: 50%;
+        padding: 10px;
+        width: 20px;
+        height: auto;
+    }
+
+    .textos {        
+        display: flex;
+        flex-direction: row;    
+    }
+
+    .textos p {
+        color: var(--cor-segunda);
+        font-size: xx-large;
+        text-align: center;
+        list-style: none;
+        width: 200px;
+    }
+    /*DELETAR*/
+    #seg {
+        display: none;
+    }
+
+    #ter {
+        display: none;
+    }
+
+    /*--- Meus projetos ---*/
+
+    #portifolio {
+        min-height: 250px;
+        width: 100%;
+    }
+
+    #portifolio h2 {
+        color: var(--cor-segunda);
+        font-size: 7vh;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .container-portifolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container-portifolio a {
+        max-width: 250px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: var(--tom-primal-e) 5px 5px 20px 0px;
+        text-decoration: none;
+        margin: 15px;
+    }
+
+    .container-portifolio img {
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 20px;
+    }
+
+    .container-portifolio figcaption {
+        font-size: x-large;
+        text-align: center;
+        color: var(--tom-primal-e);
+        font-weight: bold;
+        margin: 7px;
+    }
+
+    /*--- Curriculo ---*/
+
+    .curriculo {
+        width: 100%;
+        min-height: 20px;
+        text-align: center;
+        background-color: var(--cor-primal);
+        box-shadow: var(--tom-primal-e)0px 5px 10px 1px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .curriculo h3 {
+        font-size: 30px;
+        color: var(--branco);
+    }
+
+    .curriculo a {
+        border: var(--cor-primal) solid 5px;
+        height: Auto;
+        min-width: 50px;
+        padding: 5px;
+        text-decoration: none;
+        color: var(--cor-primal);
+        font-size: larger;
+        border-radius: 10px;
+        background-color: var(--branco);
+    }
+
+    /*--- Sobre ---*/
+
+    .sobre {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .sobre figure {
+        width: 30vw;
+    }
+
+    .card-sobre {
+        width: 40vw;
+        text-align: justify;
+    }
+
+    .card-sobre h2 {
+        margin: 7vh 0 3vh 0;
+        text-align: center;
+    }
+
+    .card-sobre p {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 5vh;
+    }
+
+    /*--- Rodapé ---*/
+
+    .tudo {
+        background-color: var(--cor-primal);
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        
+    }
+
+    .tudo figure {
+        display: flex;
+        flex-direction: row;
+        margin: 10px auto;
+        color: var(--branco);
+        width: 300px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tudo div {
+        margin: auto;
+    }
+
+
+    .tudo img {
+        width: 50px;
+        height: auto;   
+    }
+
+    .criador {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: var(--tom-primal-e);
+    }
+
+    .criador p {
+        margin: auto;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--branco);
+    }
+
+    .criador span {
+        color: var(--cor-segunda);
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    header {
+        height: 50px;
+        width: 100vw;
+        background-color: var(--cor-primal);
+        position: fixed;
+        top: 0;
+        align-items: center;    
+    }
+
+    #opcoes {
+        height: 40px;
+        width: auto;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #lista {
+        z-index: 3;
+        position: fixed;
+        top: 45px;
+        left: 0;
+        width: 100vw;
+        background-color: var(--cor-primal);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #lista ul {
+        list-style: none;
+        text-align: center;
+    }
+
+    #lista li {
+        margin: 15px 0;
+        border-bottom: solid var(--tom-primal-c) 1px;
+    }
+
+    #lista a {
+        text-decoration: none;
+        color: var(--branco);
+        font-size: 20px;
+    }
+
+    /*--- Banner ---*/
+
+    .banner {
+        background: url(img/banner.png) no-repeat center fixed;
+        background-size: 310%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .titulo {
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    .titulo h1 {
+        color: var(--cor-segunda);
+        font-size: 70px;
+        font-weight: bolder;
+    }
+
+    .container-textos {
+        display: flex;
+        align-items: center;
+        width: 400px;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    .container-textos input {
+        background-color: var(--cor-segunda);
+        border-radius: 50%;
+        padding: 10px;
+        width: 20px;
+        height: auto;
+    }
+
+    .textos {        
+        display: flex;
+        flex-direction: row;    
+    }
+
+    .textos p {
+        color: var(--cor-segunda);
+        font-size: xx-large;
+        text-align: center;
+        list-style: none;
+        width: 200px;
+    }
+    /*DELETAR*/
+    #seg {
+        display: none;
+    }
+
+    #ter {
+        display: none;
+    }
+
+    /*--- Meus projetos ---*/
+
+    #portifolio {
+        min-height: 250px;
+        width: 100%;
+    }
+
+    #portifolio h2 {
+        color: var(--cor-segunda);
+        font-size: 7vh;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .container-portifolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container-portifolio a {
+        max-width: 250px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: var(--tom-primal-e) 5px 5px 20px 0px;
+        text-decoration: none;
+        margin: 15px;
+    }
+
+    .container-portifolio img {
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 20px;
+    }
+
+    .container-portifolio figcaption {
+        font-size: x-large;
+        text-align: center;
+        color: var(--tom-primal-e);
+        font-weight: bold;
+        margin: 7px;
+    }
+
+    /*--- Curriculo ---*/
+
+    .curriculo {
+        width: 100%;
+        min-height: 20px;
+        text-align: center;
+        background-color: var(--cor-primal);
+        box-shadow: var(--tom-primal-e)0px 5px 10px 1px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .curriculo h3 {
+        font-size: 30px;
+        color: var(--branco);
+    }
+
+    .curriculo a {
+        border: var(--cor-primal) solid 5px;
+        height: Auto;
+        min-width: 50px;
+        padding: 5px;
+        text-decoration: none;
+        color: var(--cor-primal);
+        font-size: larger;
+        border-radius: 10px;
+        background-color: var(--branco);
+    }
+
+    /*--- Sobre ---*/
+
+    .sobre {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sobre figure {
+        width: 60vw;
+        margin: auto;
+    }
+
+    .card-sobre {
+        margin: auto;
+        width: 90vw;
+        text-align: justify;
+    }
+
+    .card-sobre h2 {
+        margin: 7vh 0 3vh 0;
+        text-align: center;
+    }
+
+    .card-sobre p {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 5vh;
+    }
+
+    /*--- Rodapé ---*/
+
+    .tudo {
+        background-color: var(--cor-primal);
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        
+    }
+
+    .tudo figure {
+        display: flex;
+        flex-direction: row;
+        margin: 10px auto;
+        color: var(--branco);
+        width: 300px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tudo div {
+        margin: auto;
+    }
+
+
+    .tudo img {
+        width: 50px;
+        height: auto;   
+    }
+
+    .criador {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: var(--tom-primal-e);
+    }
+
+    .criador p {
+        margin: auto;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--branco);
+    }
+
+    .criador span {
+        color: var(--cor-segunda);
+    }
+
+}
